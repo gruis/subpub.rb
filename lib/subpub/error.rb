@@ -8,4 +8,5 @@ class Subpub
   end # StandardError < ::StandardError
   class ParseError < StandardError; end
   class ByteLengthExpected < ParseError; end
+  class UnrecognizedCommand < StandardError; end
 end # class::Subpub
