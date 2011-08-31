@@ -68,7 +68,9 @@ class Subpub
       unsubscribe(socket, input[1..-1])
     when 'PUNSUBSCRIBE'
       punsubscribe(socket, input[1..-1])
-    when 'EXIT'
+    when 'QUIT'
+      # @todo do the write thing here
+    when 'SHUTDOWN'
       Process.exit
     else
       raise UnrecognizedCommand, input[0]
