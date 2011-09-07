@@ -38,7 +38,7 @@ class Subpub
   def parse(io)
     start = io.readline(SEPERATOR).chomp
     # Inline Command
-    return start[0..-1].split(" ") if start[0] != "*"
+    return start.split(" ") if start[0] != "*"
     # Unified Request Protocol
     input = []
     start[1..-1].to_i.times do
